@@ -1,10 +1,11 @@
+
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 
 
-data = pd.read_csv("spam.csv", encoding='latin-1')
+data = pd.read_csv("/content/spam.csv", encoding='latin-1')
 
 
 data = data[['v1','v2']]
@@ -32,4 +33,3 @@ msg_count = cv.transform(msg)
 prediction = model.predict(msg_count)
 
 print(prediction)
-

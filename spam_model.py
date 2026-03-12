@@ -1,4 +1,3 @@
-
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
@@ -33,3 +32,4 @@ msg_count = cv.transform(msg)
 prediction = model.predict(msg_count)
 
 print(prediction)
+
